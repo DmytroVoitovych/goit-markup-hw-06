@@ -770,6 +770,16 @@ body::before {
   flex-direction: column;
 }
 
+.inside-svg {
+  position: relative;
+}
+
+.list-input svg {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+}
+
 .title-modal {
   margin: 0;
   margin-bottom: 12px;
@@ -819,6 +829,10 @@ li:last-child .input-order {
 .input-order:focus {
   border: 1px solid var(--akcent-color);
   outline: none;
+}
+
+.input-order:focus + svg {
+  fill: var(--akcent-color);
 }
 
 li:last-child .input-order:focus {
