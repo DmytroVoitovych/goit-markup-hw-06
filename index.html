@@ -240,14 +240,38 @@
        <li class="footer-link"><a class="link-icon" href=""><svg class="link-svg" width="20" height="20"><use href="./images/sprite.svg#icon-facebook-footer"></use></svg></a></li>
        <li class="footer-link"><a class="link-icon" href=""><svg class="link-svg" width="20" height="20"><use href="./images/sprite.svg#icon-linkedin-footer"></use></svg></a></li></ul>
       </div>
+       <!-- начинаю делать форму на подписку -->
+        <form class="subscribe" action="" >
+          <label class="sign-up" for="email" name="user email">Подпишитесь на рассылку</label>
+         <div> <input class="put-sign" id="email" type="email" placeholder="E-mail">
+          <button class="sign-up-button" type="submit">Подписаться<svg class="send-svg" width="24" height="24">
+            <use href="./images/sprite.svg#icon-send"></use></svg></button></div>
+        </form>
+
       </div>
         </div>
+        <!-- начинаю делать форму на подписку -->
+
       
     </footer>
 
     <div class="backdrop is-hidden" data-modal><div class="zakaz " >
      <button class="close" type="button" data-modal-close ><svg width="11" height="11"><use href="./images/sprite.svg#icon-Vector"></use></svg></button>
-     
+     <form action="" class="order-form">
+     <p class="title-modal">Оставьте свои данные, мы вам перезвоним</p>
+     <ul class="list-form">
+     <li class="list-input"><label class="label-order" for="order-name" name="user-name">Имя</label>
+     <input class="input-order" type="text" id="order-name" value=""></li>
+    <li class="list-input"> <label class="label-order" for="tel-order" name="user-tel">Телефон</label>
+     <input class="input-order"  type="tel" id="tel-order"></li>
+    <li class="list-input"> <label class="label-order" for="mail-order" name="user-mail">Почта</label>
+     <input class="input-order" type="email" id="mail-order"></li>
+     <li class="list-input"><label class="label-order" for="coment-order" name="user-comment">Комментарий</label>
+     <textarea class="input-order" type="text" id="coment-order"  placeholder="Введите текст"></textarea></li>
+     </ul>
+     <div class="submit-order"> <label class="accept"><input type="checkbox">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора<span></span></a></label>
+     <button class="order-button" type="submit">Отправить</button></div>
+    </form>
    </div> </div>
      <!-- <button class="close" type="button" data-modal-close ><span class="push">x</span></button> -->
 
