@@ -666,6 +666,7 @@ body::before {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .put-sign::placeholder {
@@ -817,6 +818,7 @@ body::before {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 li:nth-of-type(3) .input-order {
@@ -837,9 +839,13 @@ li:last-child .input-order {
   /* outline: 1px solid var(--akcent-color); */
   outline: none;
 }
-
+.input-order + svg {
+  fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .input-order:focus + svg {
   fill: var(--akcent-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 li:last-child .input-order:focus {
@@ -849,6 +855,9 @@ li:last-child .input-order:focus {
 
 .accept {
   display: inline-block;
+  /* display: inline-flex;
+  justify-content: center;
+  align-items: center; */
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.71;
@@ -865,6 +874,7 @@ li:last-child .input-order:focus {
 .accept a > span {
   position: absolute;
   width: 100%;
+  /* bottom: 23%; */
   bottom: 10%;
   left: 0;
   border-bottom: 1px solid var(--akcent-color);
@@ -882,7 +892,7 @@ li:last-child .input-order:focus {
   line-height: 1.87;
   text-align: center;
   letter-spacing: 0.06em;
-
+  cursor: pointer;
   background-color: var(--akcent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -899,13 +909,45 @@ li:last-child .input-order:focus {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  /* padding: 4px 2px 3px 3px; */
+  padding: 4px 2px 3px 3px;
   background-color: var(--white-color);
   border-radius: 2px;
   border: 2px solid #212121;
+  background-origin: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .accept [type="checkbox"]:checked + .icon-yes {
   background-color: var(--akcent-color);
   border: var(--akcent-color);
 }
+
+/* оформление по репете */
+
+/* .accept [type="checkbox"] {
+  appearance: none;
+}
+
+.icon-yes {
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 4px 2px 3px 3px; */
+/* background-color: var(--white-color); */
+/* border-radius: 2px;
+  border: 2px solid #212121;
+  fill: currentColor;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accept [type="checkbox"]:checked + .icon-yes {
+  background-color: var(--akcent-color);
+  border: var(--akcent-color);
+  fill: var(--white-color);
+} */
